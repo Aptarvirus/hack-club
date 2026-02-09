@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Resource Hub</title>
+    <style>
+        /* 1. CSS VARIABLES: For easy theme management */
+        :root {
+            --primary-color: #2563eb;
+            --hover-color: #1d4ed8;
+            --bg-color: #f8fafc;
+            --text-dark: #1e293b;
+            --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* 2. FLEXBOX: Used for the layout grid */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .pdf-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+            width: 280px;
+            text-align: center;
+            /* 3. TRANSITIONS: Smooth scaling effect */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* 4. PSEUDO-CLASSES: Hover state interaction */
+        .pdf-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+        }
+
+        .download-btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+
+        .download-btn:active {
+            transform: scale(0.95);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Resource Library</h1>
+        <p>Select a document to download</p>
+    </header>
+
+    <main class="container">
+        <article class="pdf-card">
+            <h3>Project Proposal</h3>
+            <p>Q1 Marketing Strategy</p>
+            <a href="path-to-your-file.pdf" download class="download-btn">Download PDF</a>
+        </article>
+
+        <article class="pdf-card">
+            <h3>User Manual</h3>
+            <p>Product Setup Guide</p>
+            <a href="#" download class="download-btn">Download PDF</a>
+        </article>
+
+        <article class="pdf-card">
+            <h3>Annual Report</h3>
+            <p>Financial Summary 2025</p>
+            <a href="#" download class="download-btn">Download PDF</a>
+        </article>
+    </main>
+
+</body>
+</html>
